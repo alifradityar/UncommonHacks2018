@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-navbar hideBackButton>
+        <ion-title>
+        Sportsy
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    Live!
+</ion-content>
+
+<ion-footer no-border>
+    <ion-toolbar no-border class="vertical-align-middle map-menu scrollable-segments">
+        <ion-segment>
+        <ion-segment-button style="border:0px; color: #fff;" value="creator" (ionSelect)="setPage('creator')">
+            <ion-icon style="vertical-align:middle" class="icon-block" name="microphone"></ion-icon>
+            <span style="vertical-align:middle; padding-left:5px" > Creator </span>
+        </ion-segment-button>
+        <ion-segment-button style="border:0px; color: #fff;" value="live" (ionSelect)="setPage('live')">
+            <ion-icon style="vertical-align:middle" class="icon-block" ios="ios-radio" md="ios-radio"></ion-icon>
+            <span style="vertical-align:middle; padding-left:5px" > Live </span>
+        </ion-segment-button>
+        <ion-segment-button style="border:0px; color: #fff;" value="analysis" (ionSelect)="setPage('analytic')">
+            <ion-icon style="vertical-align:middle" class="icon-block" name="speedometer"></ion-icon>
+            <span style="vertical-align:middle; padding-left:5px" > Analytic </span>
+        </ion-segment-button>
+        <ion-segment-button style="border:0px; color: #fff;" value="setting" (ionSelect)="setPage('setting')">
+            <ion-icon style="vertical-align:middle" class="icon-block" name="settings"></ion-icon>
+            <span style="vertical-align:middle; padding-left:5px" > Setting </span>
+        </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+</ion-footer>
+  

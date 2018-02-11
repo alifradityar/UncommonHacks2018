@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title>
+      Sportsy
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid style="text-align:center">
+    <ion-row>
+      <ion-col>
+        Team A
+      </ion-col>
+      <ion-col>
+        Team B
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        {{ pointA }}
+      </ion-col>
+      <ion-col>
+        {{ pointB }}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <font size="3">
+    <table border="0" cellpadding="5" cellspacing="5" width="100%" style="background-color:white;">     
+    <br>
+    <br>
+    <tr>         
+        <td align="right">{{ passA }}</td> 
+        <td align="center">Passes</td>
+        <td align="left">{{ passB }}</td>     
+    </tr>    
+    <tr>         
+        <td align="right">{{ shotA }}</td>
+        <td align="center">Shots</td> 
+        <td align="left">{{ shotB }}</td>     
+    </tr>
+    <tr>         
+        <td align="right">0</td>
+        <td align="center">Blocks</td> 
+        <td align="left">0</td>     
+    </tr>  
+    <tr>         
+        <td align="right">0</td>
+        <td align="center">Steals</td> 
+        <td align="left">0</td>     
+    </tr>  
+    </table> 
+  </font>
+
+  <div *ngIf="isListening" style="text-align: center;font-size: 32px;margin-top: 200px;color: #e74c3c;"> LIVE! </div>
+  
+  <div style = "background-color: green;"></div>
+
+  <div style="position: absolute;bottom: 0;width: 100%;right: 0px;margin-bottom: 100px;">
+      <p>{{ bestMatch }}</p>
+  </div>
+  <div style="position: absolute;bottom: 0;width: 100%;right: 0px; left:0px; text-align:center;">
+    <button ion-button (click)="record()" *ngIf="!isListening" style="background-color: #2980b9; margin-bottom: 40px; width: 140px;" >
+      <div>
+        <ion-icon name="mic">
+          <label>Start live</label>
+        </ion-icon>
+      </div>
+    </button>
+  </div>
+</ion-content>
+
+<ion-footer no-border>
+
+	<ion-toolbar no-border class="vertical-align-middle map-menu scrollable-segments">
+		<ion-segment>
+			<ion-segment-button style="border:0px; color: #fff;" value="creator" (ionSelect)="setPage('creator')">
+				<ion-icon style="vertical-align:middle" class="icon-block" name="microphone"></ion-icon>
+				<span style="vertical-align:middle; padding-left:5px" > Creator </span>
+			</ion-segment-button>
+			<ion-segment-button style="border:0px; color: #fff;" value="live" (ionSelect)="setPage('live')">
+				<ion-icon style="vertical-align:middle" class="icon-block" ios="ios-radio" md="ios-radio"></ion-icon>
+				<span style="vertical-align:middle; padding-left:5px" > Live </span>
+			</ion-segment-button>
+      <ion-segment-button style="border:0px; color: #fff;" value="analytic" (ionSelect)="setPage('analytic')">
+        <ion-icon style="vertical-align:middle" class="icon-block" name="speedometer"></ion-icon>
+        <span style="vertical-align:middle; padding-left:5px" > Analytic </span>
+      </ion-segment-button>
+      <ion-segment-button style="border:0px; color: #fff;" value="setting" (ionSelect)="setPage('setting')">
+        <ion-icon style="vertical-align:middle" class="icon-block" name="settings"></ion-icon>
+        <span style="vertical-align:middle; padding-left:5px" > Setting </span>
+      </ion-segment-button>
+		</ion-segment>
+	</ion-toolbar>
+</ion-footer>

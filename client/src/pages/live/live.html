@@ -1,0 +1,67 @@
+<ion-header>
+    <ion-navbar hideBackButton>
+        <ion-title>
+        Sportsy
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+    <ion-card style="height: 170px;" (click)="goToVideo('8HDMO28Pgow')">
+        <img src="https://s2.reutersmedia.net/resources/r/?m=02&d=20170908&t=2&i=1200615019&r=LYNXNPED871M3&w=940"/>
+        <div class="card-title">Team A vs Team B</div>
+        <div class="card-subtitle">3 - 3</div>
+        <div style="position: absolute;bottom: 0;color: #ce1010;padding: 4px;background-color: #c7c7c7;width: 50px;font-weight: 900;">Live!</div>
+        <div style="position: absolute;bottom: 0;right: 0;color: #fff;background-color: #333;width: 180px;padding: 4px;">Bradcasted by: Someone</div>
+    </ion-card>
+    
+    <ion-card style="height: 170px;" (click)="goToVideo('8HDMO28Pgow')">
+            <img src="http://a.espncdn.com/photo/2010/1019/ny_g_giants_cowboys1_576.jpg"/>
+        <div class="card-title">Team C vs Team D</div>
+        <div class="card-subtitle">2 - 2</div>
+        <div style="position: absolute;bottom: 0;color: #ce1010;padding: 4px;background-color: #c7c7c7;width: 50px;font-weight: 900;">Live!</div>
+        <div style="position: absolute;bottom: 0;right: 0;color: #fff;background-color: #333;width: 180px;padding: 4px;">Bradcasted by: Someone</div>
+    </ion-card>
+    
+    <ion-card style="height: 170px;" (click)="goToVideo('8HDMO28Pgow')">
+            <img src="http://www.sportsonearth.com/assets/images/4/8/6/206996486/cuts/USATSI_9629720_2n7o5evu_vnrguf1f.jpg"/>
+        <div class="card-title">Team E vs Team F</div>
+        <div class="card-subtitle">2 - 2</div>
+        <div style="position: absolute;bottom: 0;color: #ce1010;padding: 4px;background-color: #c7c7c7;width: 50px;font-weight: 900;">Live!</div>
+        <div style="position: absolute;bottom: 0;right: 0;color: #fff;background-color: #333;width: 180px;padding: 4px;">Bradcasted by: Someone</div>
+    </ion-card>
+    
+    <ion-card style="height: 170px;" (click)="goToVideo('8HDMO28Pgow')">
+            <img src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ivzVIWhzCxQo/v0/800x-1.jpg"/>
+        <div class="card-title">Team G vs Team H</div>
+        <div class="card-subtitle">3 - 2</div>
+        <div style="position: absolute;bottom: 0;color: #ce1010;padding: 4px;background-color: #c7c7c7;width: 50px;font-weight: 900;">Live!</div>
+        <div style="position: absolute;bottom: 0;right: 0;color: #fff;background-color: #333;width: 180px;padding: 4px;">Bradcasted by: Someone</div>
+    </ion-card>
+                
+</ion-content>
+
+<ion-footer no-border>
+    <ion-toolbar no-border class="vertical-align-middle map-menu scrollable-segments">
+        <ion-segment>
+        <ion-segment-button style="border:0px; color: #fff;" value="creator" (ionSelect)="setPage('creator')">
+            <ion-icon style="vertical-align:middle" class="icon-block" name="microphone"></ion-icon>
+            <span style="vertical-align:middle; padding-left:5px" > Creator </span>
+        </ion-segment-button>
+        <ion-segment-button style="border:0px; color: #fff;" value="live" (ionSelect)="setPage('live')">
+            <ion-icon style="vertical-align:middle" class="icon-block" ios="ios-radio" md="ios-radio"></ion-icon>
+            <span style="vertical-align:middle; padding-left:5px" > Live </span>
+        </ion-segment-button>
+        <ion-segment-button style="border:0px; color: #fff;" value="analytic" (ionSelect)="setPage('analytic')">
+            <ion-icon style="vertical-align:middle" class="icon-block" name="speedometer"></ion-icon>
+            <span style="vertical-align:middle; padding-left:5px" > Analytic </span>
+        </ion-segment-button>
+        <ion-segment-button style="border:0px; color: #fff;" value="setting" (ionSelect)="setPage('setting')">
+            <ion-icon style="vertical-align:middle" class="icon-block" name="settings"></ion-icon>
+            <span style="vertical-align:middle; padding-left:5px" > Setting </span>
+        </ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+</ion-footer>
+  
